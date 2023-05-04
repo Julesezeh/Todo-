@@ -9,7 +9,6 @@
     ],
     "proxy": "https://localhost:8000/"
   },
-  "homepage": "https://Julesezeh/todo-app",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -51,5 +50,6 @@
   },
   "devDependencies": {
     "gh-pages": "^5.0.0"
-  }
+  },
+  "homepage": "https://Julesezeh.github.io/todo-app"
 }
