@@ -23,7 +23,7 @@ class App extends Component {
 
   refreshList = () => {
     axios
-      .get("http://localhost:8000/api/todos/")
+      .get("https://todobackend.pythonanywhere.com/api/todos/")
       .then((res) => this.setState({ todoList: res.data }))
       .catch((err) => console.log(err));
   };
@@ -37,18 +37,21 @@ class App extends Component {
 
     if (item.id) {
       axios
-        .put(`http://localhost:8000/api/todos/${item.id}/`, item)
+        .put(
+          `https://todobackend.pythonanywhere.com/api/todos/${item.id}/`,
+          item
+        )
         .then((res) => this.refreshList());
       return;
     }
     axios
-      .post("http://localhost:8000/api/todos/", item)
+      .post("https://todobackend.pythonanywhere.com/api/todos/", item)
       .then((res) => this.refreshList());
   };
 
   handleDelete = (item) => {
     axios
-      .delete(`http://localhost:8000/api/todos/${item.id}/`)
+      .delete(`https://todobackend.pythonanywhere.com/api/todos/${item.id}/`)
       .then((res) => this.refreshList());
   };
 
