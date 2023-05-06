@@ -63,7 +63,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITELIST = [
-    'https://julesezeh.github.io']
+    os.environ["todo1_cors_url"],]
 
 ROOT_URLCONF = 'backend.urls'
 
