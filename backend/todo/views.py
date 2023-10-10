@@ -10,3 +10,4 @@ logger = logging.getLogger(__name__)
 class TodoView(viewsets.ModelViewSet):
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
+    logger.warning("No return statement")
